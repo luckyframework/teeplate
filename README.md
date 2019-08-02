@@ -1,8 +1,8 @@
 # Teeplate
 
-A Crystal library for rendering multiple template files.
+A Crystal library for rendering multiple template files. Forked from the excellent https://github.com/mosop/teeplate
 
-[![CircleCI](https://circleci.com/gh/mosop/teeplate.svg?style=shield)](https://circleci.com/gh/mosop/teeplate)
+This version of teeplate was forked so we could upgrade Lucky to 0.30.0
 
 ## Installation
 
@@ -11,7 +11,7 @@ Add this to your application's `shard.yml`:
 ```yaml
 dependencies:
   teeplate:
-    github: mosop/teeplate
+    github: luckyframework/teeplate
 ```
 
 ## Supported Template Engines
