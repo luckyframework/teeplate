@@ -76,6 +76,8 @@ module Teeplate
       when :keep
         set_perm
         list_if_any "skipped   ", :yellow
+      else
+        # Do nothing. Make enum later.
       end
     end
 
@@ -190,6 +192,8 @@ module Teeplate
           return :keep
         when "q"
           raise Quit.new
+        else
+          # Do nothing. Use enum later
         end
       end
     end
