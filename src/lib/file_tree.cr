@@ -9,6 +9,7 @@ module Teeplate
     end
 
     @file_entries : Array(AsDataEntry)?
+
     # Returns collected file entries.
     def file_entries : Array(AsDataEntry)
       @file_entries ||= begin
@@ -42,7 +43,7 @@ module Teeplate
     # Collects file entries from the *dir* directory.
     def collect_from(dir, unique = false, relative_dir = nil)
       FileEntryCollector.new(File.expand_path(dir, Dir.current), relative_dir: relative_dir).entries.each do |entry|
-        file_entries << entry unless file_entries.find{|i| i.path == entry.path}
+        file_entries << entry unless file_entries.find { |i| i.path == entry.path }
       end
     end
   end
