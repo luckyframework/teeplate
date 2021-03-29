@@ -9,7 +9,7 @@ module Teeplate
     getter? forces : Bool
 
     def initialize(@absolute_path, @path, size : UInt64? = nil, perm : File::Permissions? = nil, force = false)
-      @size = size || File.size(@absolute_path)
+      @size = size || File.size(@absolute_path).to_u64
       @perm = perm || File.info(@absolute_path).permissions
       @forces = force
     end
