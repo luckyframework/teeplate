@@ -1,6 +1,6 @@
 require "spec"
 require "future"
-require "have_files/spec/dsl"
+require "./support/**"
 require "../src/teeplate"
 
 module Teeplate::SpecHelper

@@ -85,7 +85,7 @@ module Teeplate
     # Starts rendering.
     def render
       begin
-        sorted_entries = @entries.sort{|a, b| a.local_path <=> b.local_path}
+        sorted_entries = @entries.sort { |a, b| a.local_path <=> b.local_path }
         sorted_entries.each do |entry|
           if @per_entry
             entry.render

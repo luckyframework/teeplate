@@ -4,7 +4,7 @@ version: 0.8.2
 authors:
   - mosop
 
-crystal: 0.35.0
+crystal: ">= 0.36.1, < 2.0.0"
 
 dependencies:
   future:
@@ -12,9 +12,6 @@ dependencies:
     version: ~> 0.1.0
 
 development_dependencies:
-  have_files:
-    github: mosop/have_files
-    version: ~> 0.4.0
   stdio:
     github: mosop/stdio
     version: ~> 0.1.2

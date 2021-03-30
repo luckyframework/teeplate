@@ -15,7 +15,7 @@ module TeeplateFilteringFileEntriesFeature
     end
 
     def rendered_file_entries
-      super.select{|i| !i.path.ends_with?("shard.yml")}
+      super.select { |i| !i.path.ends_with?("shard.yml") }
     end
   end
 
