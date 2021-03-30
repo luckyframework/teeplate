@@ -12,9 +12,6 @@ dependencies:
     version: ~> 0.1.0
 
 development_dependencies:
-  have_files:
-    github: jwoertink/have_files
-    branch: crystal1.0
   stdio:
     github: mosop/stdio
     version: ~> 0.1.2
