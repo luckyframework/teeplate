@@ -9,7 +9,7 @@ crystal: ">= 0.36.1, < 2.0.0"
 dependencies:
   future:
     github: crystal-community/future.cr
-    branch: master
+    version: ~> 1.0.0
 
 development_dependencies:
   stdio:
