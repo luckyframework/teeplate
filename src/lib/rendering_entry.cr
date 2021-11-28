@@ -1,5 +1,3 @@
-require "future"
-
 module Teeplate
   class RenderingEntry
     # :nodoc:
@@ -142,7 +140,7 @@ module Teeplate
         return false if File.size(out_path) != size
       end
       r, w = IO.pipe
-      future do
+      spawn do
         @data.write_to w
         w.close
       end
@@ -203,7 +201,7 @@ module Teeplate
     # :nodoc:
     def diff
       r, w = IO.pipe
-      future do
+      spawn do
         begin
           @data.write_to w
         ensure
@@ -211,7 +209,7 @@ module Teeplate
         end
       end
       r2, w2 = IO.pipe
-      future do
+      spawn do
         begin
           r2.each_byte do |n|
             STDOUT.write_byte n

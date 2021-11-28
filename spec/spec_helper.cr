@@ -1,5 +1,4 @@
 require "spec"
-require "future"
 require "./support/**"
 require "../src/teeplate"
 
@@ -25,7 +24,7 @@ module Teeplate::SpecHelper
   end
 
   def interact(io, answers, prompt = "", buffer = nil)
-    future do
+    spawn do
       loop do
         if ch = io.out!.read_char
           if buf = buffer
@@ -40,7 +39,7 @@ module Teeplate::SpecHelper
             break
           end
         else
-          future do
+          spawn do
             interact io, answers, prompt, buffer: buffer
             nil
           end
